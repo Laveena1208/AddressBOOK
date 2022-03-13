@@ -164,27 +164,27 @@ require "./includes/functions.inc.php";
     <!--Custom JS-->
     <script src="js/custom.js" type="text/javascript"></script>
     <script>
-            <?php
-            $op = "";
-            $status = "";
-            if(isset($_GET['op']))
-            {
-                $op = $_GET['op'];
-            }
-            if(isset($_GET['status']))
-            {
-                $status = $_GET['status'];
-            }
-            if($op === 'add' && $status === 'success')
-            {
-            ?>
-            M.toast({
-                html: 'contact addedd successfully',
-                classes: 'green darken-1'
-            });
-            <?php
-            }
-            ?>
+            // <?php
+            // $op = "";
+            // $status = "";
+            // if(isset($_GET['op']))
+            // {
+            //     $op = $_GET['op'];
+            // }
+            // if(isset($_GET['status']))
+            // {
+            //     $status = $_GET['status'];
+            // }
+            // if($op === 'add' && $status === 'success')
+            // {
+            // ?>
+            // M.toast({
+            //     html: 'contact addedd successfully',
+            //     classes: 'green darken-1'
+            // });
+            // <?php
+            // }
+            // ?>
         </script>
 </body>
 
