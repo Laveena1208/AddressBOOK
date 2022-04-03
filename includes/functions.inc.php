@@ -63,13 +63,13 @@ function myDate($d,$format='Y-m-d')
     return date($format,strtotime($d));
 }
 
-function getOldValue($data,$key)
+function getOldValue($data,$key,$defaultValue = "")
 {
-    if(!isset($data[$key]))
+    if(isset($data[$key]))
     {
         return $data[$key];
     }
-    return ' ';
+    return $defaultValue;
 }
 function redirect($url)
 {
