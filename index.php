@@ -49,6 +49,7 @@ require "./includes/functions.inc.php";
                 New</a>
         </div>
     </div>
+    
     <!-- /Add a New Contact Link-->
 
     <!-- Table of Contacts -->
@@ -98,8 +99,8 @@ require "./includes/functions.inc.php";
                         <td><?=$row['birthdate']?></td>
                         <td><?=$row['telephone']?></td>
                         <td><?=$row['address']?></td>
-                        <td><a class="btn btn-floating green lighten-2"><i class="material-icons">edit</i></a></td>
-                        <td><a class="btn btn-floating red lighten-2 modal-trigger" href="#deleteModal"><i class="material-icons">delete_forever</i></a>
+                        <td><a class="btn btn-floating green lighten-2"  href = "edit-contact.php?id=<?=$row['id'];?>"><i class="material-icons">edit</i></a></td>
+                        <td><a class="btn btn-floating red lighten-2 modal-trigger delete-contact" href="#deleteModal" data-id="<?=$row['id'];?>"><i class="material-icons">delete_forever</i></a>
                         </td>
                     </tr>
                 <?php
@@ -138,7 +139,7 @@ require "./includes/functions.inc.php";
     <footer class="page-footer p0">
         <div class="footer-copyright ">
             <div class="container">
-                <p class="center-align">© 2020 Study Link Classes</p>
+                <p class="center-align">© 2022 Study Link Classes</p>
             </div>
         </div>
     </footer>
@@ -151,7 +152,7 @@ require "./includes/functions.inc.php";
         </div>
         <div class="modal-footer">
             <a href="#!" class="modal-close btn blue-grey lighten-2 waves-effect">Cancel</a>
-            <a href="#!" class="modal-close btn waves-effect red lighten-2">Agree</a>
+            <a href="delete-contact.php" id="deleteModalAgreeButton" class="modal-close btn waves-effect red lighten-2">Agree</a>
         </div>
     </div>
     <!-- /Delete Modal Structure -->
